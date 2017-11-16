@@ -1,0 +1,32 @@
+<div>
+    <h4>One Way Binding Example</h4>
+    <input type="text" [value]="welcomeText" />
+</div>
+
+<div>
+    <h4>Two Way Binding With NgModel</h4>
+    Enter your name:
+    <input type="text" [(ngModel)]="MyName" />
+    <p>Hello, {{MyName}}</p>
+</div>
+
+<div>
+    <h4>Two Way Binding With Reference Variable</h4>
+    Enter your name:
+    <input type="text" #textValue (keyup)="0" />
+    <p>Hello, {{textValue.value}}</p>
+</div>
+
+<div>
+    <h4>Event Binding</h4>
+    <button (click)="youClicked()">Click me!</button>
+    <p>{{clickMessage}}</p>
+</div>
+
+<div>
+    <h4>Two Way Binding With Reference Variable And Event Binding</h4>
+    Enter your name:
+    <input type="text" #myInput (keyup)="0" />
+    <button (click)="onClickMe(myInput.value)">Click me too!</button>
+    <p>{{eventMessage}}</p>
+</div>
