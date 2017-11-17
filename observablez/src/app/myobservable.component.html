@@ -1,0 +1,10 @@
+<div>
+    <h2>My Observable</h2>
+    <h5>Value list</h5>
+    <p *ngFor="let value of values">This value {{value}}</p>
+    <h5>Errors:</h5>
+    <p>{{error}}</p>
+    <h5>Finished:</h5>
+    <p>{{finished}}</p>
+    <button (click)="init()">Start</button>
+</div>
