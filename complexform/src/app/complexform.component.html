@@ -1,0 +1,22 @@
+<form [formGroup]="complexForm" (ngSubmit)="submit(complexForm.value)">
+    <div class="form-group">
+        <label>First name</label>
+        <input type="text" class="formControl" [formControl]="complexForm.controls['firstName']">
+        <p *ngIf="complexForm.controls['firstName'].hasError('required') && complexForm.controls['firstName'].touched">Must have first name</p>
+    </div>
+    <div class="form-group">
+        <label>Last name</label>
+        <input type="text" class="formControl" [formControl]="complexForm.controls['lastName']">
+        <p *ngIf="complexForm.controls['lastName'].hasError('required') && complexForm.controls['lastName'].touched">Must have last name</p>        
+        <p *ngIf="complexForm.controls['lastName'].hasError('minlength') && complexForm.controls['lastName'].touched">Must have more than 2 letters</p>        
+    </div>
+    <div class="form-group">
+        <label>Coding languages</label>
+        <input type="checkbox" value="javaEE" [formControl]="complexForm.controls['javaEE']" /> javaEE
+        <input type="checkbox" value="MEAN" [formControl]="complexForm.controls['MEAN']" /> MEAN
+        <input type="checkbox" value="react" [formControl]="complexForm.controls['react']" /> react
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn" value="submit" [disabled]="!complexForm.valid" />
+    </div>
+</form>
