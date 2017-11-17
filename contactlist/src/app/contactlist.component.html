@@ -1,0 +1,29 @@
+<h2>Contact List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Favorite Meal</th>
+            <th>Pet Name</th>
+            <th>Mom's Maiden Name</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contactList">
+            <td>{{contact.id}}</td>
+            <td>{{contact.firstName}}</td>
+            <td>{{contact.lastName}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.favMeal}}</td>
+            <td>{{contact.petName}}</td>
+            <td>{{contact.momsMaidenName}}</td>
+            <td><button (click)="removeContact(contact.id)">Remove</button></td>
+        </tr>
+    </tbody>
+</table>

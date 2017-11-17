@@ -1,0 +1,18 @@
+<h2>Add new contact</h2>
+<form (ngSubmit)="addContact()" #contactForm="ngForm">
+    <label>First Name</label>
+    <input type="text" id="firstName" name="firstName" required [(ngModel)]="contact.firstName">
+    <label>Last Name</label>
+    <input type="text" id="lastName" name="lastName" required [(ngModel)]="contact.lastName">
+    <label>Email</label>
+    <input type="text" id="email" name="email" required [(ngModel)]="contact.email">
+    <label>Phone</label>
+    <input type="text" id="phone" name="phone" required [(ngModel)]="contact.phone">
+    <label>Pet Name</label>
+    <input type="text" id="petName" name="petName" required [(ngModel)]="contact.petName">
+    <label>Favorite Meal</label>
+    <input type="text" id="favMeal" name="favMeal" required [(ngModel)]="contact.favMeal">
+    <label>Mom's Maiden Name</label>
+    <input type="text" id="momsMaidenName" name="momsMaidenName" required [(ngModel)]="contact.momsMaidenName">
+    <input type="submit" value="Add"/>
+</form>
